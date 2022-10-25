@@ -51,11 +51,18 @@ img {
   max-width: 100%;
   height: auto;
 }
+address {
+  text-decoration: none;
+}
 button {
   display: block;
   cursor: pointer;
   border: none;
   border-radius: 4px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .container {
   width: 1200px;
@@ -67,12 +74,8 @@ button {
   padding-left: 0;
   margin: 0;
 }
-.link,
-address {
+.link {
   text-decoration: none;
-}
-.footer-address {
-  font-style: normal;
 }
 
 /* Хедер */
@@ -91,7 +94,9 @@ address {
 .logo span {
   color: var(--accent-first-color--);
 }
-
+.sky {
+  border: 1px solid #ececec;
+}
 .sky .container {
   display: flex;
   align-items: center;
@@ -154,18 +159,15 @@ address {
 /* Студія */
 
 /* Основний контент */
-.hero .container {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 696px;
-}
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
   background-color: var(--background-footer-color--);
 }
 .hero-title {
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
 
   color: #ffffff;
@@ -178,8 +180,7 @@ address {
 }
 .button {
   padding: 10px 32px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 
   color: #ffffff;
   background-color: #2196f3;
@@ -189,6 +190,7 @@ address {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
+  letter-spacing: 0.06em;
 }
 .button:hover,
 .button:focus {
@@ -212,8 +214,6 @@ address {
 }
 .features-list {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .features-list .item {
   width: 270px;
@@ -253,7 +253,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
 }
-.direction .container {
+.direction {
   padding-bottom: 94px;
 }
 .direction .list {
@@ -262,10 +262,8 @@ address {
 .direction .item:not(:last-child) {
   margin-right: 30px;
 }
-.team .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
+/* Наша команда */
+
 .card-list {
   display: flex;
 }
@@ -273,20 +271,20 @@ address {
   background-color: #f5f4fa;
 }
 .card {
-  padding-bottom: 30px;
-
   text-align: center;
   background-color: var(--background-color--);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
+.team .card-inform {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .card:not(:last-child) {
   margin-right: 30px;
 }
-.card img {
-  margin-bottom: 30px;
-}
+
 .team .name {
   margin-bottom: 10px;
 
@@ -307,14 +305,13 @@ address {
 
 /* Портфоліо */
 
-.portfolio .container {
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
 .filter {
   display: flex;
-  padding-bottom: 16px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   justify-content: center;
 }
 .filter .item:not(:last-child) {
@@ -347,24 +344,26 @@ address {
   display: flex;
   flex-wrap: wrap;
 }
-.example-list .item {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eeeeee;
-}
-.example-list img {
-  display: block;
-  margin-bottom: 20px;
-}
+
 .example-list .item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 .example-list .item:nth-child(-n + 6) {
   margin-bottom: 30px;
 }
+.example-list .item-inform {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+
+  background: #ffffff;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
 .example-list .title {
   margin-bottom: 4px;
-  margin-left: 24px;
-  width: 322px;
 
   color: var(--main-text-color--);
   font-weight: 700;
@@ -372,32 +371,23 @@ address {
   line-height: 2;
 }
 .example-list .text {
-  width: 322px;
-  margin-left: 24px;
-
   color: var(--ouwer-text-color--);
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
 }
 
 /* Footer */
-.ground .container {
-  padding-top: 60px;
-  padding-bottom: 60px;
-}
 
 .ground {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: var(--background-footer-color--);
 }
 
 /*Logo low*/
 .logo.low {
-  display: block;
-  width: 145px;
-  margin-bottom: 20px;
-
   color: #ffffff;
 }
 .logo.low span {
@@ -406,33 +396,24 @@ address {
 
 /*Contact low */
 .footer-address {
-  width: 231px;
+  margin-top: 20px;
+
+  font-style: normal;
+}
+.contact-low .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .contact-low .map {
-  display: block;
-  margin-bottom: 9px;
-
   color: #ffffff;
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
 }
 .contact-low .map:hover,
 .contact-low .map:focus {
   color: var(--accent-first-color--);
 }
-.contact-low .mail {
-  display: block;
-  margin-bottom: 9px;
-}
 .contact-low .link-low {
   color: var(--footer-text-color--);
-
-  font-weight: 400;
-  font-size: 14px;
   line-height: 1.7;
-  letter-spacing: 0.03em;
 }
 .contact-low .link-low:hover,
 .contact-low .link-low:focus {
